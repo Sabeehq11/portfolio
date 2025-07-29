@@ -350,4 +350,48 @@ Key features include:
     ],
     createdAt: '2025-05-01',
   },
+  {
+    id: 'portfolio-website',
+    title: '💼 Portfolio Website',
+    category: 'web',
+    year: '2024',
+    description: 'A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS, hosted on Firebase.',
+    longDescription: `This portfolio website showcases my projects, experience, and skills through a clean, modern interface. Built with React and TypeScript for type safety and maintainability, it features a responsive design that works seamlessly across all devices.
+
+The site uses Tailwind CSS for styling, React Router for navigation, and is deployed on Firebase Hosting for fast, reliable performance. It includes dynamic project filtering, detailed project pages, an integrated resume download, and a contact form.
+
+Key features include:
+• Responsive design optimized for all device sizes
+• Dark/light theme support with system preference detection
+• Dynamic project showcase with filtering capabilities
+• Integrated resume download and experience timeline
+• Contact form with real-time validation
+• SEO-optimized structure for better discoverability
+• Fast loading times with optimized assets
+• Modern animations and smooth transitions
+• Firebase hosting for reliable global delivery`,
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'React Router', 'Firebase Hosting', 'Git', 'Responsive Design'],
+    images: [
+      '/images/portfolio/Portfolio.png',
+      '/images/portfolio/Portfolio2.png'
+    ],
+    demoUrl: 'https://portfolio-be668.web.app',
+    githubUrl: 'https://github.com/Sabeehq11/portfolio',
+    featured: true,
+    challenges: [
+      'Creating a responsive design that works across all device sizes',
+      'Implementing smooth animations and transitions for better UX',
+      'Optimizing performance for fast loading times',
+      'Integrating Firebase hosting with custom domain configuration',
+      'Building reusable components with TypeScript for type safety'
+    ],
+    results: [
+      'Fully responsive portfolio showcasing all projects and experience',
+      'Fast loading times with optimized images and assets',
+      'Professional online presence with custom domain',
+      'Integrated resume download and contact functionality',
+      'SEO-optimized structure for better search visibility'
+    ],
+    createdAt: '2025-01-01',
+  },
 ] 
