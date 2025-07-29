@@ -290,51 +290,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-
-        {/* FAQ Section */}
-        <div className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Frequently Asked Questions
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                What's your typical response time?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                I usually respond to all inquiries within 24 hours. For project consultations, 
-                I may need a few days to provide a thoughtful response.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                Do you work with international clients?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Absolutely! I work with clients worldwide and am comfortable with different 
-                time zones and remote collaboration tools.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                What's your hourly rate?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                My rates vary depending on the project scope and timeline. I prefer to discuss 
-                requirements first and provide a custom quote.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                Do you offer ongoing support?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Yes, I offer maintenance and support packages for projects I've built. 
-                This includes bug fixes, updates, and feature enhancements.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   )
