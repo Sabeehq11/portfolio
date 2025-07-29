@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,16 +11,67 @@
   
   body {
     @apply font-sans antialiased text-primary-900 bg-white;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(147, 51, 234, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
   }
   
   .dark body {
     @apply text-primary-100 bg-primary-950;
   }
+  
+  /* Subtle chaos pattern overlay */
+  .chaos-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.02;
+    background-image: url('/images/joker/joker5.png');
+    background-size: 600px;
+    background-repeat: repeat;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+  
+  .dark .chaos-overlay {
+    mix-blend-mode: screen;
+    opacity: 0.03;
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center px-6 sm:px-8 py-3 text-sm font-medium tracking-wide text-white bg-primary-600 rounded-sm hover:bg-primary-700 transition-all duration-300 hover:shadow-lg;
+    @apply inline-flex items-center px-6 sm:px-8 py-3 text-sm font-medium tracking-wide text-white bg-primary-600 rounded-sm hover:bg-primary-700 transition-all duration-300 hover:shadow-lg relative overflow-hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(34, 197, 94, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+  
+  .btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
   }
   
   .dark .btn-primary {
@@ -34,7 +87,22 @@
   }
   
   .nav-link {
-    @apply text-sm font-medium tracking-wide text-primary-700 hover:text-primary-900 transition-colors duration-300;
+    @apply text-sm font-medium tracking-wide text-primary-700 hover:text-primary-900 transition-colors duration-300 relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a855f7 0%, #22c55e 100%);
+    transition: width 0.3s;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
   }
   
   .dark .nav-link {
@@ -47,6 +115,19 @@
   
   .dark .nav-link-active {
     @apply text-primary-100;
+  }
+  
+  /* Joker-inspired card hover effect */
+  .joker-card {
+    @apply relative transition-all duration-300;
+  }
+  
+  .joker-card:hover {
+    transform: rotate(1deg) scale(1.02);
+  }
+  
+  .joker-card:nth-child(even):hover {
+    transform: rotate(-1deg) scale(1.02);
   }
 }
 
@@ -79,4 +160,105 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.5),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.5),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.5);
+  }
+  14% {
+    text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.5),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.5),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.5);
+  }
+  15% {
+    text-shadow: 
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.5),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.5),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.5);
+  }
+  49% {
+    text-shadow: 
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.5),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.5),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.5);
+  }
+  50% {
+    text-shadow: 
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.5),
+      0.05em 0 0 rgba(0, 255, 0, 0.5),
+      0 -0.05em 0 rgba(0, 0, 255, 0.5);
+  }
+  99% {
+    text-shadow: 
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.5),
+      0.05em 0 0 rgba(0, 255, 0, 0.5),
+      0 -0.05em 0 rgba(0, 0, 255, 0.5);
+  }
+  100% {
+    text-shadow: 
+      -0.025em 0 0 rgba(255, 0, 0, 0.5),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.5),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.5);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(10px) rotate(-1deg);
+  }
+}
+
+@keyframes tilt {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0.5deg);
+  }
+  75% {
+    transform: rotate(-0.5deg);
+  }
+}
+
+/* Subtle smile cursor on specific elements */
+.chaos-hover {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="28" font-size="28">🃏</text></svg>'), auto;
+}
+
+/* Hidden easter egg */
+.joker-easter-egg {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1000;
+  cursor: pointer;
+  transform: rotate(15deg);
+}
+
+.joker-easter-egg:hover {
+  opacity: 0.8;
+  animation: tilt 2s ease-in-out infinite;
+}
+
+.joker-easter-egg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(147, 51, 234, 0.3);
 } 
