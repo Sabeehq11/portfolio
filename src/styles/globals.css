@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased text-primary-900 bg-white;
+  }
+  
+  .dark body {
+    @apply text-primary-100 bg-primary-950;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center px-8 py-3 text-sm font-medium tracking-wide text-white bg-primary-600 rounded-sm hover:bg-primary-700 transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .dark .btn-primary {
+    @apply text-white bg-primary-500 hover:bg-primary-600;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center px-8 py-3 text-sm font-medium tracking-wide text-primary-700 bg-transparent border border-primary-300 rounded-sm hover:bg-primary-50 hover:border-primary-400 transition-all duration-300;
+  }
+  
+  .dark .btn-secondary {
+    @apply text-primary-300 border-primary-700 hover:bg-primary-900 hover:border-primary-600;
+  }
+  
+  .nav-link {
+    @apply text-sm font-medium tracking-wide text-primary-700 hover:text-primary-900 transition-colors duration-300;
+  }
+  
+  .dark .nav-link {
+    @apply text-primary-300 hover:text-primary-100;
+  }
+  
+  .nav-link-active {
+    @apply text-primary-900;
+  }
+  
+  .dark .nav-link-active {
+    @apply text-primary-100;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
