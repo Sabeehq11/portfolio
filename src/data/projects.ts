@@ -9,6 +9,7 @@ export interface Project {
   images?: string[]
   demoUrl?: string
   githubUrl?: string
+  videoUrl?: string
   featured?: boolean
   challenges?: string[]
   results?: string[]
@@ -42,6 +43,7 @@ Key features include:
     ],
     demoUrl: 'https://wordwiseai-15b77.web.app',
     githubUrl: 'https://github.com/Sabeehq11/wordwise-ai',
+    videoUrl: 'https://www.loom.com/share/d3fbe5c314654d8d8d3f413b6dfb17c6?sid=c5f8e05c-057f-4935-a254-2cb5255876a7',
     featured: true,
     challenges: [
       'Implementing real-time grammar checking without impacting typing performance',
@@ -127,6 +129,7 @@ Key features include:
       '/images/moodboardai/moodboard2.png'
     ],
     githubUrl: 'https://github.com/Sabeehq11/MoodBoardai',
+    videoUrl: 'https://www.loom.com/share/ffa8ecd477bf49239c29c5d6660696fe?sid=c3050dfe-8667-442b-85cf-35d4e399564f',
     featured: true,
     challenges: [
       'Integrating Spotify API for seamless music recommendations',
@@ -171,6 +174,7 @@ Key features include:
     ],
     demoUrl: 'https://medicalchartingapp.web.app/dashboard',
     githubUrl: 'https://github.com/Duraman3444/PreExamChartingAgent',
+    videoUrl: 'https://www.loom.com/share/8993d92ff52c4b5caf11b4466cbcab76?sid=788242a4-3723-458e-a8f6-01baa26162e3',
     featured: true,
     challenges: [
       'Ensuring HIPAA compliance for patient data security',
@@ -215,6 +219,7 @@ Key features include:
     ],
     demoUrl: 'https://sabeehq11.itch.io/headshot',
     githubUrl: 'https://github.com/Sabeehq11/HeadShot',
+    videoUrl: 'https://www.loom.com/share/d5d57d84f03946a9838512aa5011baef?sid=144d6015-14d1-4888-bd4d-7967ae123ddf',
     featured: true,
     challenges: [
       'Implementing smooth physics for soccer ball mechanics',
@@ -258,6 +263,7 @@ Key features include:
       '/images/Trac/Trac3.png'
     ],
     githubUrl: 'https://github.com/Sabeehq11/Legacy-Mondernization',
+    videoUrl: 'https://www.loom.com/share/49821635aa6a4180908e19c585fd0428?sid=f597bc51-e348-49ff-9276-51569f30f884',
     featured: true,
     challenges: [
       'Modernizing legacy codebase while preserving core functionality',

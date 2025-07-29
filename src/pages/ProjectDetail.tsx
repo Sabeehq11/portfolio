@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import { HiArrowLeft, HiExternalLink, HiCode } from 'react-icons/hi'
+import { HiArrowLeft, HiExternalLink, HiCode, HiPlay } from 'react-icons/hi'
 import { projects } from '../data/projects'
 
 export default function ProjectDetail() {
@@ -53,12 +53,23 @@ export default function ProjectDetail() {
           </p>
 
           <div className="flex flex-wrap gap-4">
+            {project.videoUrl && (
+              <a
+                href={project.videoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center"
+              >
+                <HiPlay className="w-5 h-5 mr-2" />
+                Watch Demo Video
+              </a>
+            )}
             {project.demoUrl && (
               <a
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center"
+                className="btn-secondary inline-flex items-center"
               >
                 <HiExternalLink className="w-5 h-5 mr-2" />
                 View Live Demo
