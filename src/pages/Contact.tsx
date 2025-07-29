@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { HiMail, HiLocationMarker, HiPhone } from 'react-icons/hi'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
