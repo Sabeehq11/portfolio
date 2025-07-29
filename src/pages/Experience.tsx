@@ -140,7 +140,7 @@ export default function Experience() {
           <p className="text-lg text-primary-500 dark:text-primary-500 mb-6">
             📍 Teaneck, NJ | 📧 sabeehq11@gmail.com
           </p>
-          <div className="flex justify-center space-x-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="/resume.pdf"
               download

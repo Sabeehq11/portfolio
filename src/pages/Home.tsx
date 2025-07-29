@@ -27,7 +27,7 @@ export default function Home() {
             </p>
             
             {/* Quick Links */}
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/projects" 
                 className="inline-flex items-center px-6 py-3 bg-primary-900 dark:bg-primary-100 text-white dark:text-primary-900 rounded-sm hover:bg-primary-800 dark:hover:bg-primary-200 transition-colors duration-200 group"

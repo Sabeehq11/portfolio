@@ -18,7 +18,7 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center px-8 py-3 text-sm font-medium tracking-wide text-white bg-primary-600 rounded-sm hover:bg-primary-700 transition-all duration-300 hover:shadow-lg;
+    @apply inline-flex items-center px-6 sm:px-8 py-3 text-sm font-medium tracking-wide text-white bg-primary-600 rounded-sm hover:bg-primary-700 transition-all duration-300 hover:shadow-lg;
   }
   
   .dark .btn-primary {
@@ -26,7 +26,7 @@
   }
   
   .btn-secondary {
-    @apply inline-flex items-center px-8 py-3 text-sm font-medium tracking-wide text-primary-700 bg-transparent border border-primary-300 rounded-sm hover:bg-primary-50 hover:border-primary-400 transition-all duration-300;
+    @apply inline-flex items-center px-6 sm:px-8 py-3 text-sm font-medium tracking-wide text-primary-700 bg-transparent border border-primary-300 rounded-sm hover:bg-primary-50 hover:border-primary-400 transition-all duration-300;
   }
   
   .dark .btn-secondary {

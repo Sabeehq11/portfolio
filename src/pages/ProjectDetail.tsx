@@ -52,7 +52,7 @@ export default function ProjectDetail() {
             {project.description}
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4">
             {project.videoUrl && (
               <a
                 href={project.videoUrl}
